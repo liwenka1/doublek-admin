@@ -21,6 +21,11 @@
 	</p>
 	<p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 	<el-button type="info" @click="login"><svg-icon icon-class="test" />SVG 本地图标</el-button>
+	<el-button>
+		<el-icon>
+			<i-ep-plus />
+		</el-icon>
+	</el-button>
 </template>
 
 <script setup lang="ts">

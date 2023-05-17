@@ -1,13 +1,22 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import 'element-plus/dist/index.css' //引入样式
-import 'virtual:svg-icons-register' // 本地SVG图标
-import 'uno.css'
-import { createPinia } from 'pinia'
+import { setupStore } from '@/store'
 import router from '@/router'
+
+import '@/permission'
+// 本地SVG图标
+import 'virtual:svg-icons-register'
+
+// 国际化
+import i18n from '@/lang/index'
+
+//样式
+import 'element-plus/dist/index.css'
+import '@/styles/index.scss'
+import 'uno.css'
 
 const app = createApp(App)
 
-app.use(createPinia())
-app.use(router)
-app.mount('#app')
+// 全局注册 状态管理(store)
+setupStore(app)
+app.use(router).use(i18n).mount('#app')

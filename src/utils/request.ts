@@ -1,4 +1,5 @@
 import axios, { InternalAxiosRequestConfig, AxiosResponse } from 'axios'
+import { useUserStoreHook } from '@/store/modules/user'
 
 // 创建 axios 实例
 const service = axios.create({
@@ -10,6 +11,10 @@ const service = axios.create({
 // 请求拦截器
 service.interceptors.request.use(
 	(config: InternalAxiosRequestConfig) => {
+		const userStore = useUserStoreHook()
+		if (userStore.token) {
+			config.headers.Authorization = userStore.token
+		}
 		return config
 	},
 	(error: any) => {

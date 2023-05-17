@@ -66,13 +66,19 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 		resolve: {
 			alias: {
 				'@': path.resolve('./src'), // @代替src
-				'#': path.resolve('./types') // #代替types
+				'#': path.resolve('./types'), // #代替types
+				'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js'
 			}
 		},
 		css: {
+			// CSS 预处理器
 			preprocessorOptions: {
+				//define global scss variable
 				scss: {
-					additionalData: '@import "@/styles/index.scss";'
+					javascriptEnabled: true,
+					additionalData: `
+				  @use "@/styles/variables.scss" as *;
+				`
 				}
 			}
 		},

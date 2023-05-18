@@ -7,19 +7,19 @@ import enLocale from './package/en'
 import zhCnLocale from './package/zh-cn'
 
 const messages = {
-	'zh-cn': {
-		...zhCnLocale
-	},
-	en: {
-		...enLocale
-	}
+  'zh-cn': {
+    ...zhCnLocale
+  },
+  en: {
+    ...enLocale
+  }
 }
 
 const i18n = createI18n({
-	legacy: false,
-	locale: appStore.language,
-	messages: messages,
-	globalInjection: true
+  legacy: false,
+  locale: appStore.language,
+  messages: messages,
+  globalInjection: true
 })
 
 export default i18n

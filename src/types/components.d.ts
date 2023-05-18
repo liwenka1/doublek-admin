@@ -8,21 +8,31 @@ import '@vue/runtime-core'
 export {}
 
 declare module '@vue/runtime-core' {
-	export interface GlobalComponents {
-		ElButton: typeof import('element-plus/es')['ElButton']
-		ElDropdown: typeof import('element-plus/es')['ElDropdown']
-		ElDropdownItem: typeof import('element-plus/es')['ElDropdownItem']
-		ElDropdownMenu: typeof import('element-plus/es')['ElDropdownMenu']
-		ElForm: typeof import('element-plus/es')['ElForm']
-		ElFormItem: typeof import('element-plus/es')['ElFormItem']
-		ElIcon: typeof import('element-plus/es')['ElIcon']
-		ElInput: typeof import('element-plus/es')['ElInput']
-		ElTooltip: typeof import('element-plus/es')['ElTooltip']
-		HelloWorld: typeof import('./../components/HelloWorld.vue')['default']
-		IEpPlus: typeof import('~icons/ep/plus')['default']
-		LangSelect: typeof import('./../components/LangSelect/index.vue')['default']
-		RouterLink: typeof import('vue-router')['RouterLink']
-		RouterView: typeof import('vue-router')['RouterView']
-		SvgIcon: typeof import('./../components/SvgIcon/index.vue')['default']
-	}
+  export interface GlobalComponents {
+    ElButton: typeof import('element-plus/es')['ElButton']
+    ElDivider: typeof import('element-plus/es')['ElDivider']
+    ElDropdown: typeof import('element-plus/es')['ElDropdown']
+    ElDropdownItem: typeof import('element-plus/es')['ElDropdownItem']
+    ElDropdownMenu: typeof import('element-plus/es')['ElDropdownMenu']
+    ElForm: typeof import('element-plus/es')['ElForm']
+    ElFormItem: typeof import('element-plus/es')['ElFormItem']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElInput: typeof import('element-plus/es')['ElInput']
+    ElMenu: typeof import('element-plus/es')['ElMenu']
+    ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
+    ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
+    ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
+    ElSwitch: typeof import('element-plus/es')['ElSwitch']
+    ElTooltip: typeof import('element-plus/es')['ElTooltip']
+    IEpCaretBottom: typeof import('~icons/ep/caret-bottom')['default']
+    IEpClose: typeof import('~icons/ep/close')['default']
+    IEpPlus: typeof import('~icons/ep/plus')['default']
+    IEpSetting: typeof import('~icons/ep/setting')['default']
+    LangSelect: typeof import('./../components/LangSelect/index.vue')['default']
+    Pagination: typeof import('./../components/Pagination/index.vue')['default']
+    RightPanel: typeof import('./../components/RightPanel/index.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
+    SvgIcon: typeof import('./../components/SvgIcon/index.vue')['default']
+  }
 }

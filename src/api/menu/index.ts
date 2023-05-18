@@ -6,10 +6,10 @@ import { MenuQuery, MenuVO, MenuForm } from './types'
  * 获取路由列表
  */
 export function listRoutes() {
-	return request({
-		url: '/api/v1/menus/routes',
-		method: 'get'
-	})
+  return request({
+    url: '/api/v1/menus/routes',
+    method: 'get'
+  })
 }
 
 /**
@@ -18,21 +18,21 @@ export function listRoutes() {
  * @param queryParams
  */
 export function listMenus(queryParams: MenuQuery): AxiosPromise<MenuVO[]> {
-	return request({
-		url: '/api/v1/menus',
-		method: 'get',
-		params: queryParams
-	})
+  return request({
+    url: '/api/v1/menus',
+    method: 'get',
+    params: queryParams
+  })
 }
 
 /**
  * 获取菜单下拉树形列表
  */
 export function listMenuOptions(): AxiosPromise<OptionType[]> {
-	return request({
-		url: '/api/v1/menus/options',
-		method: 'get'
-	})
+  return request({
+    url: '/api/v1/menus/options',
+    method: 'get'
+  })
 }
 
 /**
@@ -41,10 +41,10 @@ export function listMenuOptions(): AxiosPromise<OptionType[]> {
  * @param id
  */
 export function getMenuForm(id: number): AxiosPromise<MenuForm> {
-	return request({
-		url: '/api/v1/menus/' + id + '/form',
-		method: 'get'
-	})
+  return request({
+    url: '/api/v1/menus/' + id + '/form',
+    method: 'get'
+  })
 }
 
 /**
@@ -53,11 +53,11 @@ export function getMenuForm(id: number): AxiosPromise<MenuForm> {
  * @param data
  */
 export function addMenu(data: MenuForm) {
-	return request({
-		url: '/api/v1/menus',
-		method: 'post',
-		data: data
-	})
+  return request({
+    url: '/api/v1/menus',
+    method: 'post',
+    data: data
+  })
 }
 
 /**
@@ -67,11 +67,11 @@ export function addMenu(data: MenuForm) {
  * @param data
  */
 export function updateMenu(id: string, data: MenuForm) {
-	return request({
-		url: '/api/v1/menus/' + id,
-		method: 'put',
-		data: data
-	})
+  return request({
+    url: '/api/v1/menus/' + id,
+    method: 'put',
+    data: data
+  })
 }
 
 /**
@@ -80,8 +80,8 @@ export function updateMenu(id: string, data: MenuForm) {
  * @param id 菜单ID
  */
 export function deleteMenu(id: number) {
-	return request({
-		url: '/api/v1/menus/' + id,
-		method: 'delete'
-	})
+  return request({
+    url: '/api/v1/menus/' + id,
+    method: 'delete'
+  })
 }

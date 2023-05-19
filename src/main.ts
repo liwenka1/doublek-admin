@@ -11,7 +11,7 @@ import 'virtual:svg-icons-register'
 import i18n from '@/lang/index'
 
 //样式
-import 'element-plus/dist/index.css'
+import 'element-plus/theme-chalk/dark/css-vars.css'
 import '@/styles/index.scss'
 import 'uno.css'
 

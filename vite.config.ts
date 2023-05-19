@@ -54,7 +54,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 
       createSvgIconsPlugin({
         // 指定需要缓存的图标文件夹
-        iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
+        iconDirs: [path.resolve(pathSrc, 'assets/icons')],
         // 指定symbolId格式
         symbolId: 'icon-[dir]-[name]'
       }),
@@ -65,8 +65,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
     //这里进行配置别名
     resolve: {
       alias: {
-        '@': path.resolve('./src'), // @代替src
-        '#': path.resolve('./types'), // #代替types
+        '@': pathSrc,
         'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js'
       }
     },
@@ -89,8 +88,8 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       proxy: {
         // 反向代理解决跨域
         [env.VITE_APP_BASE_API]: {
-          // target: 'http://vapi.youlai.tech', // 线上接口地址
-          target: 'http://localhost:8989', // 本地接口地址 , 后端工程仓库地址：https://gitee.com/youlaiorg/youlai-boot
+          target: 'http://vapi.youlai.tech', // 线上接口地址
+          // target: 'http://localhost:8989', // 本地接口地址 , 后端工程仓库地址：https://gitee.com/youlaiorg/youlai-boot
           changeOrigin: true,
           rewrite: (path) =>
             path.replace(new RegExp('^' + env.VITE_APP_BASE_API), '') // 替换 /dev-api 为 target 接口地址
